@@ -16,7 +16,7 @@ services:
       HOST: 0.0.0.0
       NODE_ENV: development
       APP_KEY: 3vlNXXhbckXg3VYhb1G8KLRaL0xvbPUF
-      CACHE_VIEWS: false
+      CACHE_VIEWS: "false"
       DB_CONNECTION: pg
       PG_HOST: db
       PG_PORT: 5432
