@@ -10,25 +10,20 @@ apiRepo=git@github.com:civicledger/aud-api.git
 infraRepo=git@github.com:civicledger/aud-infra.git
 adminRepo=false
 
-if $infraRepo
+if [ -d "./infra" ]
 then
-    if [ -d "./infra" ]
-    then
-        echo "${YELLOW}Infra repo has already been cloned${NC}"
-    else
-        echo "Cloning infrastructure repo"
-        git clone $infraRepo infra
-        cp infra/docker-compose.yml ./docker-compose.yml
-        
-        for i in {1..5}
-        do 
-            random=$(cat /dev/urandom | env LC_ALL=C tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)
-            sed -i '' "s|UNIQUE_VALUE_$i|$random|" docker-compose.yml
-        done
-        echo -e "${GREEN}Infrastructure repo cloned${NC}"
-    fi
+    echo "${YELLOW}Infra repo has already been cloned${NC}"
 else
-    echo "No infrastructure repo found"
+    echo "Cloning infrastructure repo"
+    git clone $infraRepo infra
+    cp infra/docker-compose.yml ./docker-compose.yml
+    
+    for i in {1..5}
+    do 
+        random=$(cat /dev/urandom | env LC_ALL=C tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)
+        sed -i '' "s|UNIQUE_VALUE_$i|$random|" docker-compose.yml
+    done
+    echo -e "${GREEN}Infrastructure repo cloned${NC}"
 fi
 
 if [ -d "./frontend" ]
