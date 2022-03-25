@@ -24,7 +24,7 @@ services:
       PG_PASSWORD: adonis
       PG_DB_NAME: adonis
       CM_COMPANY_ID: 6f71df6d-40bb-4027-a53d-e11396714bf9
-      GUARDIAN_SERVICE_URL: http://host.docker.internal:3002/api/v1
+      GUARDIAN_SERVICE_URL: http://host.docker.internal:3000/api/v1
       GUARDIAN_ROOT_USER: guardiandatasker
       HEDERA_OPERATOR_ID: 0.0.26558164
       GUARDIAN_IMPORT_MESSAGE_ID: 1646697409.745741000
