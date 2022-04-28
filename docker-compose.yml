@@ -17,6 +17,7 @@ services:
       NODE_ENV: development
       APP_KEY: 3vlNXXhbckXg3VYhb1G8KLRaL0xvbPUF
       CACHE_VIEWS: "false"
+      DRIVE_DISK: local
       DB_CONNECTION: pg
       PG_HOST: db
       PG_PORT: 5432
@@ -27,6 +28,7 @@ services:
       GUARDIAN_SERVICE_URL: http://host.docker.internal:3000/api/v1
       GUARDIAN_ROOT_USER: guardiandatasker
       HEDERA_OPERATOR_ID: 0.0.26558164
+      HASHGRAPH_TRANSACTION_URL: https://testnet.dragonglass.me/hedera/transactions
       GUARDIAN_IMPORT_MESSAGE_ID: 1646697409.745741000
       DO_SPACES_ENDPOINT: sgp1.digitaloceanspaces.com
       DO_SPACES_NAME: datasker-file-uploads
