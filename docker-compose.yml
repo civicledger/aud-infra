@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   api-service:
     build: ./api
@@ -29,7 +29,7 @@ services:
       GUARDIAN_ROOT_USER: guardiandatasker
       HEDERA_OPERATOR_ID: 0.0.26558164
       HASHGRAPH_TRANSACTION_URL: https://testnet.dragonglass.me/hedera/transactions
-      GUARDIAN_IMPORT_MESSAGE_ID: 1646697409.745741000
+      GUARDIAN_IMPORT_MESSAGE_ID: 1650504125.135379000
       DO_SPACES_ENDPOINT: sgp1.digitaloceanspaces.com
       DO_SPACES_NAME: datasker-file-uploads
       CM_USER_PASSWORD: UNIQUE_VALUE_1
